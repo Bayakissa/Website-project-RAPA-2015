@@ -22,7 +22,7 @@ class Comment extends Eloquent {
 	 * @var array
 	 */
 
-	public static function valida($input)
+	public static function validation($input)
 	{
 	    $rules = array(
 	        'pseudo' => 'required|Alpha|between:6,64|unique:users',

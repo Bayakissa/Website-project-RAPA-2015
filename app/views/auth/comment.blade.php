@@ -1,3 +1,5 @@
+<!doctype html>
+
 @extends('layouts.master')
  
 @section('content')
@@ -24,25 +26,23 @@ background-color: #87AFED;
 
 <body>
 
+
+
 <?php 
 
-/*	$pseudo = Input::get('pseudo');
-	$email = Input::get('email');
-	$comment = Input::get('comment');
+//$connection=mysqli_connect('localhost','Bayakissa','Bayakissa101');
 
-	DB::insert('insert into comments (id, pseudo, email, comment) values (?, ?, ?, ?)', array('', '$pseudo','$email', '$comment'));
+//$comments = DB::table('comments')->get();
 
-	$comments = DB::table('comments')->get();
+//$results = DB::select('select * from comments');
+//return $results;
 
-	foreach ($comments as $comments)
-	{
-	    var_dump($comments->pseudo);
-	}
-*/
+?> 
 
-?>
+
+
 <div class="col-md-12"><h4><strong>
-        Vous avez quelque chose à partager avec nous? Lancez-vous !
+        Vous aussi, vous avez quelque chose à partager avec nous? Lancez-vous !
     </strong></h4></div>
     <br>
     <div class="row col-md-12">
@@ -86,7 +86,7 @@ background-color: #87AFED;
                     {{ Form::submit('Envoyer', array('class' => 'btn btn-info pull-right')) }}
                 </div>
             </div>
-            {{ Form::close()}}
+            {{ Form::close() }}
         </div>
 
     </div>

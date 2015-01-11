@@ -107,6 +107,11 @@ class AuthController extends BaseController {
     public function getComment()
     {
         return $this->createView('auth.comment');
+       /* $data = DB::table('comments')->select('username')->get();
+        $data = DB::table('comments')->select('email')->get();
+        $data = DB::table('comments')->select('comment')->get();
+
+        $view = View::make('auth.comment')->with('username', $username)->with('email', $email)->with('comment', $comment);*/
     }
   /**
     * Traitement du formulaire de commentaire
@@ -115,14 +120,14 @@ class AuthController extends BaseController {
     */
     public function postComment()
     {
-        $v = Comment::valida(Input::all()); 
+        $v = Comment::validation(Input::all()); 
 
         if ($v->passes()) {
             $comments = new Comment; 
             $comments->username = Input::get('username'); 
             $comments->email = Input::get('email'); 
             $comments->comment = Input::get('comment'); 
-            die;
+            //die;
             $comments->save(); 
             return Redirect::to('auth/comment')->with('flash_notice', 'Votre commentaire à bien été ajouté. Merci!'); 
         }

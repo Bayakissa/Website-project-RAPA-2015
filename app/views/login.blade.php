@@ -60,11 +60,7 @@ background-color: #87AFED;
             </div>
             {{ Form::close()}}
         </div>
-        <div class="col-md-5">
-            <p>
-                {{ link_to('remind/remind', 'J\'ai oublié mon mot de passe...', array('class' => 'btn btn-success')) }}
-            </p>
-        </div>
+
     </div>
     <div class="col-md-12">
         Si vous n'avez pas encore de compte vous pouvez en créer un en cliquant sur ce bouton :

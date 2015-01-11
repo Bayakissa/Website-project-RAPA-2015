@@ -6,7 +6,7 @@
 
 	<meta charset="UTF-8">
 
-	<title>RAPA</title>
+	<title>Contact</title>
 
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -34,7 +34,7 @@ background-color: #9ABCF0;
 }
 
 .thumbnail {
-	background-color: #85B1EA;
+	background-color: #FFFFF0;
 }
 
 body {

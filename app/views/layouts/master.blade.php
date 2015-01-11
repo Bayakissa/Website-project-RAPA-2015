@@ -39,14 +39,14 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{{ URL::to('') }}}">Home</a></li>
                         @if ( Auth::guest() )
-                            <li>{{ HTML::link('login', 'Login') }}</li>
+                            <li>{{ HTML::link('login', 'Connexion') }}</li>
 							<li>{{ HTML::link('inscription', 'Inscription') }}</li>
                             <li>{{ HTML::link('comment', 'Livre d\'Or') }}</li>
                             <li>{{ HTML::link('contact', 'Contact') }}</li>
 
-		
                         @else
-                            <li>{{ HTML::link('logout', 'Logout') }}</li>
+                            <li><a href="{{{ URL::to('') }}}">Home</a></li>
+                            <li>{{ HTML::link('logout', 'Deconnexion') }}</li>
                             <li>{{ HTML::link('comment', 'Livre d\'Or') }}</li>
                             <li>{{ HTML::link('contact', 'Contact') }}</li>
 

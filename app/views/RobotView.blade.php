@@ -83,6 +83,8 @@ background-color: #456296;
 		2) Le robot détecte l'endroit où se trouve le propriétaire <br>
 		3) La caméra s'allume et le propriétaire peut discuter grâce à la caméra et le micro avec l'un des proches qui 
 		le contacte.</p>
+        <!-- <img src="Robot.png" alt="HTML5 Icon" width="185" height="150" position=center> -->
+        <img src="Robot.png" alt="HTML5 Icon" class="img-responsive">
         
 	</div>
 

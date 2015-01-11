@@ -15,42 +15,24 @@
 Route::get('/', 'RobotController@Robot');
 Route::when( '*', 'csrf', array( 'post' ) );
 
-// Login / Inscription / Contact
+// Connexion 
 Route::controller('auth', 'AuthController');
 
 Route::get('login', array('as' => 'login', 'uses' => 'AuthController@showLogin'));
 Route::post('login', array('uses' => 'AuthController@postLogin'));
 
+// Inscription 
 Route::get('inscription', array('as' => 'inscription', 'uses' => 'AuthController@getInscription'));
 Route::post('inscription', 'AuthController@postInscription');
 
+// Livre d'or
 Route::get('comment', array('as' => 'comment', 'uses' => 'AuthController@getComment'));
-Route::post('comment', 'AuthController@postComment');
+//Route::post('comment', 'AuthController@postComment');
+Route::post('comment', array('uses' => 'AuthController@postComment'));
 
+// Contact
 Route::get('contact', array('as' => 'contact', 'uses' => 'AuthController@getContact'));
+    Route::get('logout', 'HomeController@doLogout');
 
-
-// Secure-Routes
-Route::group(array('before' => 'auth'), function()
-{
-    Route::get('secret', 'HomeController@showSecret');
-});
-
-
-Route::resource('auth/inscription', 'AuthController',
-                array('only' => array('index', 'show')));
-
-
-
-Route::group(array('before' => 'auth'), function()
-{
-	Route::get('logout', 'HomeController@doLogout');
-
-});
-
-Route::filter('auth', function()
-{
-    if (Auth::guest()) return Redirect::guest('login');
-}); 
 
 
