@@ -45,7 +45,6 @@
                             <li>{{ HTML::link('contact', 'Contact') }}</li>
 
                         @else
-                            <li><a href="{{{ URL::to('') }}}">Home</a></li>
                             <li>{{ HTML::link('logout', 'Deconnexion') }}</li>
                             <li>{{ HTML::link('comment', 'Livre d\'Or') }}</li>
                             <li>{{ HTML::link('contact', 'Contact') }}</li>
